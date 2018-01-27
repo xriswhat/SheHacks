@@ -78,15 +78,15 @@
         </nav>
         
         <div id="topfornav">
-            <h1 class="para" style="font-size: 300%; margin-top: 50px;">What Happened With Your Nose</h1>
+            <h1 class="para" style="font-size: 300%; margin-top: 50px;">What Happened With Your Eyes</h1>
             <p class="para" style="font-size: 150%">Please check the box besides the picture that demonstrates your symptom.</p>
 
-            <div><input type="checkbox" id="runningnose"  ><img src="pic/runningnose.png" alt="A picture dipicting running nose symptom"></div><br>
-            <div><input type="checkbox" id="sneezing" ><img src="pic/sneeze.png" alt="A picture dipicting sneezing"></div><br>
-            <div><input type="checkbox" id="pimple"><img src="pic/pimpleonnose.png" alt="A picture dipicting pimple nose"></div><br>
-            <div><input type="checkbox" id="nosebleed"><img src="pic/nosebleed.png" alt="A picture dipicting bleeding nose"></div><br>
+            <div><input type="checkbox" id="redeye"  ><img src="pic/redeye.png" alt="A picture dipicting red eyes"></div><br>
+            <div><input type="checkbox" id="blurry" ><img src="pic/blurry.png" alt="A picture dipicting blurry eye"></div><br>
+            <div><input type="checkbox" id="itching"><img src="pic/itching.png" alt="A picture dipicting itching eyes"></div><br>
+            <div><input type="checkbox" id="tearing"><img src="pic/tearing.png" alt="A picture dipicting tearing eyes"></div><br>
 
-            <div><button type="button" id="submitbutton" class="button" onclick="showupFunction()">Submit</button></div><br><br><br>
+            <a href="#resultcontainer"> <div> <button type="button" id="submitbutton" class="button" onclick="showupFunction()"> Submit </button> </div>  </a> <br><br><br>
 
             <div class="result" id="resultcontainer"><h1 style="font-family: fantasy; text-align: center">RESULT</h1><div id="result">
             </div>        
@@ -101,22 +101,24 @@
                 document.getElementById("result").innerHTML= "<b>Dear User,<br>Here is your result:</b><br><br>";
                 
                 
-                var isChecked1 = document.getElementById("runningnose").checked;
-                var isChecked2 = document.getElementById("sneezing").checked;
-                var isChecked3 = document.getElementById("pimple").checked;
-                var isChecked4 = document.getElementById("nosebleed").checked;
+                var isChecked1 = document.getElementById("redeye").checked;
+                var isChecked2 = document.getElementById("blurry").checked;
+                var isChecked3 = document.getElementById("itching").checked;
+                var isChecked4 = document.getElementById("tearing").checked;
                 if (isChecked1){
-                    document.getElementById("result").innerHTML += "<b>Running nose:</b><br> ++ Clear snot, stuffy nose ⇒ Beginning cold<br> ++ Fever, having yellow to green snot, cough, ache sore in body, fatigue ⇒ Flu<br> ++ Clear snot, itchy, redness on skin ⇒ Allergy <br><br>";
+                    document.getElementById("result").innerHTML += "<b>Blood in eye: </b><br> ++ Eyes look slightly bloodshot ⇒ Eyestrain, need some rest <br> ++ Days of redness and becomes worse ⇒ Allergies, bacterial infection, exposure to chemicals and irritants <br> ++ Being hit  => Eyes Injury, tell your ma. <br>++ Red in eyes seriously and feel itching, burning, tearing, discharge => Corneal Diseases, Uveitis <br><br>";
                 } 
                 if (isChecked2){
-                    document.getElementById("result").innerHTML += "<b>Redness spot on nose:</b><br> ++ Itchy, hives => Rashes<br> ++ Rashes are flat => Muscle<br> ++ Rashes are raised => Papule <br> ++ Tiny, pinpoint hemorrhages develop into larger purplish red spot  => petechiae <br><br>";
+                    document.getElementById("result").innerHTML += "<b>Blurriness</b><br> ++ Feeling of tiredness; cannot concentrate ⇒ Eyestrain, need some rest <br>++ Blurry vision in one eye or both eyes; along with squinting, eye strain and headaches ⇒ Myopia <br> ++ Istant objects can be seen sharply but your eyes can't focus properly on close-up objects or doing so causes unusual eye strain and fatigue ⇒ Hyperopia <br>++ Blurred vision at all distances ⇒ Astigmatism <br>++ Over 40 and beginning to experience blurry vision up close ⇒ Presbyopia   https://www.wikiwand.com/en/Presbyopia<br>++ Eye's gel-like vitreous begins to liquify with age, causing microscopic bits of tissue within the vitreous to float freely inside the eye, casting shadows on the retina. ⇒ Eye floaters <br><br>";
                 }
                 if (isChecked3){
-                    document.getElementById("result").innerHTML += "<b>Nose bleeding: </b><br> ++ Constantly nose bleeding for a long period of time => Blood disorder or more severe<br> ++ Foreign object stuck in nose<br> ++ Having other allergic reaction => Allergy <br> ++ Being hit  => Nose Injury <br> ++ Little blood streak => Nose Injury by picking the Nose <br> ++ Cough, sneezing, nasal discharge, fever, scratchy or sore throat => Upper Respiratory Infection <br><br>";
+                    document.getElementById("result").innerHTML += "<b>Itchiness: </b><br> ++ Puffy, swell => Allergy<br> ++ eyelids are red and inflamed => blepharitis<br><br>";
                 } 
                 if (isChecked4){
-                    document.getElementById("result").innerHTML += "b>Nose bleeding: </b><br> ++ Constantly nose bleeding for a long period of time => Blood disorder or more severe<br> ++ Foreign object stuck in nose<br> ++ Having other allergic reaction => Allergy <br> ++ Being hit  => Nose Injury <br> ++ Little blood streak => Nose Injury by picking the Nose <br> ++ Cough, sneezing, nasal discharge, fever, scratchy or sore throat => Upper Respiratory Infection <br><br>";
-                } 
+                    document.getElementById("result").innerHTML += "<b>Tearing: </b><br> ++ Tear over-secretion ⇒ eyelash and eyelid problems or allergies<br> ++ Eye produces excess tears to combat the irritation and dryness ⇒ a dry eye problem<br>";
+                } else {
+                	document.getElementById("result").innerHTML += "Please select your symptoms.";
+                }
             }
             
         
