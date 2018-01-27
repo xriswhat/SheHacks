@@ -1,0 +1,127 @@
+<!DOCTYPE>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <title> Women's Health </title>
+        <meta name= "author" content="Xiaoyue Tan & Ziwei Zang" />
+        <meta name="description" content="This Website is designed for explaining the nose symptoms.">
+        <link rel="healthd icon" href="pic/icon_white-01.ico" type="image/x-ico">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/fixed-navigation-bar.css">
+	
+        <style>
+            body{
+                background-color: rgb(197, 170, 152);
+            }
+            img{
+                width: 500px;
+                height: auto;
+                
+            }
+            div{
+                width:500px;
+                margin: 0 auto;
+            }
+            .para{
+                text-align: center;
+            }
+            .button {
+                background-color: #00a087;
+                border: none;
+                color:black;
+                padding: 15px 30px;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 200;
+                display: block;
+                margin: 10 auto;
+                border-radius: 10px;
+            }
+            .button:hover{
+                background-color: #d67e7a;
+                color: aliceblue;
+            }
+            div .result{
+                display: none;
+                padding: 20px;
+                height:800px;
+                width: 800px;
+                background-color: white;
+                border-radius: 15px;
+                margin:auto;
+                position: absolute;
+                left: 300px;
+            }
+            div .topfornav{
+                
+                
+            }
+        </style>
+    </head>
+    
+    <body>
+        <!--Navigation Bar -->
+        <nav class="fixed-nav-bar">
+          <div id="menu" class="menu">
+            <a class="sitename">Women's Health Issue Diagnose</a>
+            <!-- Example responsive navigation menu  -->
+            <a class="show" href="#menu"><img src=pic/menu.jpg style="width:40px;"></a><a class="hide" href="#hidemenu"> <img src=pic/menu.jpg style="width:40px"> </a>
+            <ul class="menu-items">
+              <li><a href="body.html"><img src=pic/icon_without.png style="width:40px; "></a></li>
+              <li><a href="//sixrevisions.com/about/">About</a></li>
+              <li><a href="//sixrevisions.com/contact/">Contact</a></li>
+              <li><a href="//twitter.com/sixrevisions">Twitter</a></li>
+              <li><a href="//www.facebook.com/sixrevisions">SOS</a></li>
+          </ul>
+          </div>
+        </nav>
+        
+        <div id="topfornav">
+            <h1 class="para" style="font-size: 300%; margin-top: 50px;">What Happened With Your Nose</h1>
+            <p class="para" style="font-size: 150%">Please check the box besides the picture that demonstrates your symptom.</p>
+
+            <div><input type="checkbox" id="runningnose"  ><img src="pic/runningnose.png" alt="A picture dipicting running nose symptom"></div><br>
+            <div><input type="checkbox" id="sneezing" ><img src="pic/sneeze.png" alt="A picture dipicting sneezing"></div><br>
+            <div><input type="checkbox" id="pimple"><img src="pic/pimpleonnose.png" alt="A picture dipicting pimple nose"></div><br>
+            <div><input type="checkbox" id="nosebleed"><img src="pic/nosebleed.png" alt="A picture dipicting bleeding nose"></div><br>
+
+            <div><button type="button" id="submitbutton" class="button" onclick="showupFunction()">Submit</button></div><br><br><br>
+
+            <div class="result" id="resultcontainer"><h1 style="font-family: fantasy; text-align: center">RESULT</h1><div id="result">
+            </div>        
+        </div>
+            
+        </div>
+        
+        
+        <script type="text/javascript">
+            function showupFunction(){
+                document.getElementById("resultcontainer").style.display = "initial";
+                document.getElementById("result").innerHTML= "<b>Dear User,<br>Here is your result:</b><br><br>";
+                
+                
+                var isChecked1 = document.getElementById("runningnose").checked;
+                var isChecked2 = document.getElementById("sneezing").checked;
+                var isChecked3 = document.getElementById("pimple").checked;
+                var isChecked4 = document.getElementById("nosebleed").checked;
+                if (isChecked1){
+                    document.getElementById("result").innerHTML += "<b>Running nose:</b><br> ++ Clear snot, stuffy nose ⇒ Beginning cold<br> ++ Fever, having yellow to green snot, cough, ache sore in body, fatigue ⇒ Flu<br> ++ Clear snot, itchy, redness on skin ⇒ Allergy <br><br>";
+                } 
+                if (isChecked2){
+                    document.getElementById("result").innerHTML += "<b>Redness spot on nose:</b><br> ++ Itchy, hives => Rashes<br> ++ Rashes are flat => Muscle<br> ++ Rashes are raised => Papule <br> ++ Tiny, pinpoint hemorrhages develop into larger purplish red spot  => petechiae <br><br>";
+                }
+                if (isChecked3){
+                    document.getElementById("result").innerHTML += "<b>Nose bleeding: </b><br> ++ Constantly nose bleeding for a long period of time => Blood disorder or more severe<br> ++ Foreign object stuck in nose<br> ++ Having other allergic reaction => Allergy <br> ++ Being hit  => Nose Injury <br> ++ Little blood streak => Nose Injury by picking the Nose <br> ++ Cough, sneezing, nasal discharge, fever, scratchy or sore throat => Upper Respiratory Infection <br><br>";
+                } 
+                if (isChecked4){
+                    document.getElementById("result").innerHTML += "b>Nose bleeding: </b><br> ++ Constantly nose bleeding for a long period of time => Blood disorder or more severe<br> ++ Foreign object stuck in nose<br> ++ Having other allergic reaction => Allergy <br> ++ Being hit  => Nose Injury <br> ++ Little blood streak => Nose Injury by picking the Nose <br> ++ Cough, sneezing, nasal discharge, fever, scratchy or sore throat => Upper Respiratory Infection <br><br>";
+                } 
+            }
+            
+        
+        </script>
+                
+    </body>
+
+</html>

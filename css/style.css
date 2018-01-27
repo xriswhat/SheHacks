@@ -1,4 +1,7 @@
 .imageStandard {display:block; position: relative; margin: 0 auto}
+body{
+background-color: rgb(197, 170, 152);
+}
 
 /* Mouse hover to pop up text indicating body parts
 /* Container needed to position the overlay. Adjust the width as needed */
@@ -43,3 +46,32 @@
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
+.enter{
+    background-color: white;
+    opacity: 0.9;
+    margin: 0 auto;
+    height: 700px;
+    width: 900px;
+    z-index: 1;
+    position: absolute;
+    left: 250px;
+    top: 50px;
+    border-radius: 15px;
+}
+.button0 {
+                background-color: #00a087;
+                border: none;
+                color:black;
+                padding: 15px 30px;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 200;
+                position: relative;
+    left: 400px;
+    top: 500px;
+    
+}
+.button0:hover{
+                background-color: #d67e7a;
+                color: aliceblue;
+            }

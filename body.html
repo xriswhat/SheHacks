@@ -7,23 +7,73 @@
 	<meta name="description" content="This Website is designed for.......">
 	<link rel="healthd icon" href="pic/icon_white-01.ico" type="image/x-ico">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fixed-navigation-bar.css">
+	
 </head>
 
 <body>
-	<!--Mouse Hover -->
+    <div id="enter" class="enter">
+    <button type="button" id="getin" class="button0" onclick="showupFunction()" style="display:initial">Enter</button></div>
+    
+    
+    
+<!--Navigation Bar -->
+<nav class="fixed-nav-bar">
+  <div id="menu" class="menu">
+    <a class="sitename">Women's Health Issue Diagnose</a>
+    <!-- Example responsive navigation menu  -->
+    <a class="show" href="#menu"><img src=pic/menu.jpg width=40px></a><a class="hide" href="#hidemenu"> <img src=pic/menu.jpg width=40px> </a>
+    <ul class="menu-items">
+      <li><a href="body.html"><img src=pic/icon_without.png width=40px></a></li>
+      <li><a href="//sixrevisions.com/about/">About</a></li>
+      <li><a href="//sixrevisions.com/contact/">Contact</a></li>
+      <li><a href="//twitter.com/sixrevisions">Twitter</a></li>
+      <li><a href="//www.facebook.com/sixrevisions">SOS</a></li>
+  </ul>
+  </div>
+</nav>
+
+	<!--Image Overly Zoom -->
 		<div class="container">
- 	 		<area shape="circle" coords="" alt="Head" href="https://www.smith.edu/about-smith/dining-services/menus"> <!-- top right down left -->
+ 	 		<area shape="circle" coords="188,141,43" alt="Head" href="https://www.google.com/"> <!-- top right down left -->
  	 		<div class="overlay">
  	 			<div class="text"> Head </div>
  	 		</div>
  	 	</div>
  	 	
  	<!--Seperate body into areas -->
-	<img class= imageStandard src="pic/body.jpg" alt="A picture of a woman body to let user to click on." usemap=#workmap>
+	<img class= imageStandard style="margin-top: 60px" src="pic/body.jpg" alt="A picture of a woman body to let user to click on." usemap=#workmap>
 	<map name="workmap">
- 	 	<area shape="circle" coords="198, 142, 26" alt="Head" href="https://www.smith.edu/about-smith/dining-services/menus"> 
- 	 	<area shape="poly" coords="90, 163, 88, 208, 90, 264, 97, 300, 199, 299, 200, 268, 212, 226, 219, 205, 207, 172, 193, 181, 175, 167, 141, 165, 125, 173" alt="UpperBody" href="https://www.smith.edu/">
- 		<area shape="circle" coords="" alt="LowerBody" href="https://www.w3schools.com/html/html5_webstorage.asp">
-	</map>
+ 	 	<area shape="circle" coords="188,137,34" 
+ 	 		alt="Head" href="face.html"> 
+ 	 	
+ 	 	<area shape="poly" coords="152, 47, 170, 44, 174, 53, 193, 65, 252, 93, 288, 129, 233, 216, 217, 221, 190, 183, 245, 
+ 	 		140, 237, 127, 206, 98, 185, 88, 175, 81, 177, 73, 173, 65, 165, 61, 156, 73, 164, 54" 
+ 	 		alt="Right Arm" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeWUYJQ1fHMZwLcQjBYdkBIyvHAcYef3m01mq-gZRpks1L1mFWVw">
+ 	 	
+ 	 	 <area shape="poly" coords="85, 206, 51, 195, 12, 166, 12, 151, 31, 141, 54, 124, 90, 117, 135, 109, 137, 130, 146, 
+ 	 	 	139, 141, 143, 120, 143, 107, 134, 74, 156, 110, 165"
+ 	 	 	alt="Left Arm" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeWUYJQ1fHMZwLcQjBYdkBIyvHAcYef3m01mq-gZRpks1L1mFWVw"/>
+ 	 	 
+   		 <area shape="poly" coords="128, 171, 182, 185, 211, 227, 194, 288, 96, 299, 88, 220"
+ 		 	alt="Breast" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBBQv4xgBysu0X6KgJCGHuNLlSVklxnDJRocVMjWcKpcsHVcv1">
+ 		 	
+ 		 <area shape="poly" coords="99, 301, 194, 293, 218, 318, 238, 362, 178, 422, 150, 396, 114, 394, 100, 391" 
+ 		 	alt="Abdomen and Women Reproductive System" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd
+ 		 	9GcRLFaKWJKWTuazVLV5PlsDGTnHx3Y_nLgYIPj8KYb27FyDlvLUS3w"/>
+ 		 	
+ 		  <area shape="poly" coords="104, 400, 148, 403, 175, 428, 185, 440, 185, 509, 185, 440, 237, 369, 250, 437, 
+ 		  218, 545, 218, 579, 204, 656, 180, 715, 193, 744, 186, 757, 160, 759, 152, 748, 153, 728, 129, 742, 111, 752, 
+ 		  91, 750, 91, 735, 108, 717, 131, 701, 128, 672, 120, 617, 127, 582, 135, 558, 131, 535, 113, 492, 100, 404" 
+ 		  	alt= "Lower Body" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt0L4tfSeOR-69saD-8LmjGEI1pa97G86cKwqz5y5UIITWFOF9tg"/>
+   
+ 	</map>
+ 	
+    <script type="application/javascript">
+        function showupFunction(){
+                document.getElementById("enter").style.display = "none"
+        }
+    </script>
 </body>
 <html>
+
