@@ -3,6 +3,10 @@ body{
 background-color: rgb(197, 170, 152);
 }
 
+h1 {
+    display:block; width:50%; margin-left: 25%; margin-right:25%; margin-top:25%;
+}
+
 /* Mouse hover to pop up text indicating body parts
 /* Container needed to position the overlay. Adjust the width as needed */
 .container {
@@ -46,18 +50,21 @@ background-color: rgb(197, 170, 152);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
+/*Enter Page */
 .enter{
     background-color: white;
+    top: 6%;
+    left:6%;
     opacity: 0.9;
-    margin: 0 auto;
-    height: 700px;
-    width: 900px;
+    margin: 10px auto;
+    height: 650px;
+    width: 90%;
     z-index: 1;
     position: absolute;
-    left: 250px;
-    top: 50px;
+    display:block; 
     border-radius: 15px;
 }
+/*Button on the Enter Page */
 .button0 {
                 background-color: #00a087;
                 border: none;
@@ -66,9 +73,9 @@ background-color: rgb(197, 170, 152);
                 text-align: center;
                 font-size: 16px;
                 font-weight: 200;
-                position: relative;
-    left: 400px;
-    top: 500px;
+                position: absolute;
+                top: 60%;
+                left: 40%;
     
 }
 .button0:hover{
