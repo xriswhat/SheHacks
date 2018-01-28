@@ -1,0 +1,130 @@
+<!DOCTYPE>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <title> Women's Health</title>
+        <meta name= "author" content="Xiaoyue Tan & Ziwei Zang" />
+        <meta name="description" content="This Website is designed for explaining the nose symptoms.">
+        <link rel="healthd icon" href="pic/icon_white-01.ico" type="image/x-ico">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/fixed-navigation-bar.css">
+	
+        <style>
+            body{
+                background-color: rgb(197, 170, 152);
+            }
+            img{
+                width: 500px;
+                height: auto;
+                
+            }
+            div{
+                width:500px;
+                margin: 0 auto;
+            }
+            .para{
+                text-align: center;
+            }
+            .button {
+                background-color: #00a087;
+                border: none;
+                color:black;
+                padding: 15px 30px;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 200;
+                display: block;
+                margin: 10 auto;
+                border-radius: 10px;
+            }
+            .button:hover{
+                background-color: #d67e7a;
+                color: aliceblue;
+            }
+            div .result{
+                display: none;
+                padding: 20px;
+                height:1400px;
+                width: 800px;
+                background-color: white;
+                border-radius: 15px;
+                margin:auto;
+                position: absolute;
+                left: 300px;
+            }
+            div .topfornav{
+                
+                
+            }
+            input[type="checkbox"] {
+              transform:scale(1.5, 1.5);
+            }
+        </style>
+    </head>
+    
+    <body>
+        <!--Navigation Bar -->
+        <nav class="fixed-nav-bar">
+          <div id="menu" class="menu">
+            <a class="sitename">Women's Health Issue Diagnose &nbsp <img src="pic/icon_without.png" style= "width:40px;" > </a>
+            <!-- Example responsive navigation menu  -->
+            <a class="show" href="#menu"><img src="pic/menu.jpg" style="width:40px;"></a> <a class="hide" href="#hidemenu"> <img src=pic/menu.jpg style="width:40px;"> </a>
+            <ul class="menu-items">
+              <li><a href="body.html">HOME</a></li>
+              <li><a href="//sixrevisions.com/contact/">About</a></li>
+              <li><a href="http://www.ushospitalfinder.com/">Hopstital</a></li>
+          </ul>
+          </div>
+        </nav>
+        
+        <div id="topfornav">
+            <h1 class="para" style="font-size: 300%; margin-top: 50px;">What Happened With Your Legs</h1>
+            <p class="para" style="font-size: 150%">Please check the box besides the picture that demonstrates your symptom.</p>
+
+            <div><input type="checkbox" id="kneepain"  ><img src="pic/kneepain.png" alt="A picture dipicting knee joint pain"></div><br>
+            <div><input type="checkbox" id="anklepain" ><img src="pic/anklepain.png" alt="A picture dipicting pain in ankle joints"></div><br>
+            <div><input type="checkbox" id="thighpain"><img src="pic/thighpain.png" alt="A picture dipicting pain on thigh muscle"></div><br>
+            <div><input type="checkbox" id="calfpain"><img src="pic/calfpain.png" alt="A picture dipicting pain on calf muscle"></div><br>
+
+            <a href="#resultcontainer"> <div> <button type="button" id="submitbutton" class="button" onclick="showupFunction()"> Submit </button> </div>  </a> <br><br><br>
+
+            <div class="result" id="resultcontainer"><h1 style="font-family: fantasy; text-align: center">RESULT</h1><div id="result">
+            </div>        
+        </div>
+            
+        </div>
+        
+        
+        <script type="text/javascript">
+            function showupFunction(){
+                document.getElementById("resultcontainer").style.display = "initial";
+                document.getElementById("result").innerHTML= "<b>Dear User,<br>Here is your result:</b><br><br>";
+                
+                
+                var isChecked1 = document.getElementById("kneepain").checked;
+                var isChecked2 = document.getElementById("anklepain").checked;
+                var isChecked3 = document.getElementById("thighpain").checked;
+                var isChecked4 = document.getElementById("calfpain").checked;
+                if (isChecked1){
+                    document.getElementById("result").innerHTML += "<b>Knee Pain: </b><br> ++ACL injury. An ACL injury is the tearing of the anterior cruciate ligament (ACL) — one of four ligaments that connect your shinbone to your thighbone. An ACL injury is particularly common in people who play basketball, soccer or other sports that require sudden changes in direction. <br>++Fractures. The bones of the knee, including the kneecap (patella), can be broken during motor vehicle collisions or falls. People whose bones have been weakened by osteoporosis can sometimes sustain a knee fracture simply by stepping wrong. <br>++Torn meniscus. The meniscus is formed of tough, rubbery cartilage and acts as a shock absorber between your shinbone and thighbone. It can be torn if you suddenly twist your knee while bearing weight on it.<br>++Knee bursitis. Some knee injuries cause inflammation in the bursae, the small sacs of fluid that cushion the outside of your knee joint so that tendons and ligaments glide smoothly over the joint.<br>++Tendinitis is irritation and inflammation of one or more tendons — the thick, fibrous tissues that attach muscles to bones. Runners, skiers, cyclists, and those involved in jumping sports and activities are prone to develop inflammation in the patellar tendon, which connects the quadriceps muscle on the front of the thigh to the shinbone.<br><br>";
+                } 
+                if (isChecked2){
+                    document.getElementById("result").innerHTML += "<b>Ankle Pain</b><br> ++A sprain is generally caused when the ankle rolls or twists so that the outside ankle moves toward the ground, tearing the ligaments of the ankle that hold the bones together. Rolling the ankle can also cause damage to the cartilage or tendons of your ankle. <br>++Gout occurs when uric acid builds up in the body. This higher than normal concentration of uric acid (a by-product of the body’s normal breakdown of old cells) can deposit crystals in the joints, causing sharp pain. Pseudogout is a similar condition where calcium deposits build up in the joints. Symptoms of both gout and pseudogout include pain, swelling, and redness.<br>++Arthritis is the inflammation of the joints. Multiple types of arthritis can cause pain in the ankles, but osteoarthritis is the most common. Osteoarthritis is often caused by wear and tear on the joints. The older people are, the more likely they are to develop osteoarthritis.<br>++Septic arthritis is arthritis that is caused by a bacterial or fungal infection. This can cause pain in the ankles, if the ankles are one of the areas infected.<br><br>";
+                }
+                if (isChecked3){
+                    document.getElementById("result").innerHTML += "<b>Thigh Muscle Pain</b><br>++Caused by pressure on the lateral femoral cutaneous nerve, meralgia paresthetica (MP) may cause tingling, numbness, and a burning pain in the outer part of your thigh. It typically occurs on one side of the body and is caused by compression of the nerve. <br>++While many blood clots aren’t harmful, when one forms deep in one of your major veins, it’s a serious condition known as deep vein thrombosis (DVT). While deep vein clots appear more frequently in the lower legs, they can also form in one or both thighs.<br>++A complication of diabetes, diabetic neuropathy occurs as a result of uncontrolled high blood sugar levels. It typically begins in the hands or feet, but it can spread to other parts of the body as well, including the thighs.<br>++Greater trochanteric pain syndrome can cause pain in the outside of your upper thighs. It’s typically caused by injury, pressure, or repetitive movements, and it’s common in runners and in women<br>++Also common among runners, iliotibial band syndrome (ITBS) happens when the iliotibial band, which runs down the outside of the thigh from the hip to the skin, becomes tight and inflamed.<br><br>";
+                } 
+                if (isChecked4){
+                    document.getElementById("result").innerHTML += "<b>Calf Muscle Pain:</b><br>++Calf muscle strain is the most common cause of acute onset calf pain. Usually, this injury occurs during a sports or exercise activity. Common symptoms of a calf strain include pain, swelling, and bruising. <br>++The medial gastrocnemius is the part of the calf muscle most commonly injured. The medial head of the gastrocnemius is one of the three major calf muscles that is the source of pain when the calf muscle is strained.<br>++The plantaris muscle is a thin, small muscle that is not even present in about 10 percent to 20 percent of the population. The muscle runs along the gastrocnemius muscle but is a tiny fraction of the size. The plantaris muscle can rupture, causing a sudden, snapping pain in the back of the leg. Because the muscle is of no functional importance, treatment is non-operative.<br>++A blood clot needs to be considered as a cause of calf pain, especially when the calf pain is not the immediate result of an injury. Blood clots can form in the deep veins of the leg, causing a blockage in circulation. This may cause swelling and pain in the calf. Blood clots are more common in the days and weeks after injuries and surgical procedures. Knowing if you have a blood clot is important. Without treatment, the clot can travel to the lungs, causing difficulty breathing.<br>++Cramps in the leg muscles are a common cause of calf pain. Usually, the symptoms are intermittent (not constant pain) and relieved by stretching and heat application.<br>++Calf pain is usually considered pain in the softer, muscular portion of the lower leg, whereas an Achilles tendon rupture typically causes pain in the back of the heel. Achilles ruptures that occur higher up on the tendon should be considered when evaluating calf pain.<br><br>";
+                } else {
+                	document.getElementById("result").innerHTML += "Please select your symptoms.";
+                }
+            }
+            
+        
+        </script>
+                
+    </body>
+
+</html>
