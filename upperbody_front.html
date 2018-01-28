@@ -104,29 +104,22 @@
                 
                 
                 var isChecked1 = document.getElementById("chestpain").checked;
-                var isChecked2 = document.getElementById("breasatpain").checked;
+                var isChecked2 = document.getElementById("breastpain").checked;
                 var isChecked3 = document.getElementById("lungpain").checked;
                 if (isChecked1){
-                    document.getElementById("result").innerHTML += "<b>Chestpain:</b> <br> 
-                     ++ Burning feeling behind breastbone ⇒ Heartburn <br>
-                     ++ Chest tightness, chest pressure and chest discomfort (angina), shortness of breath; pain, numbness, weakness or coldness in your legs or arms, pain in the neck, jaw, throat, upper abdomen or back  ⇒ Heart disease <br> 
-                     ++Sore muscle ⇒  Chronic pain syndromes, such as <a href="https://www.mayoclinic.org/diseases-conditions/fibromyalgia/symptoms-causes/syc-20354780">fibromyalgia </a>    <br><br>";
+                    document.getElementById("result").innerHTML += "<b>Chest pain:</b><br> ++ Burning feeling behind breastbone => Heartburn <br> ++ Chest tightness, chest pressure and chest discomfort (angina), shortness of breath; pain, numbness, weakness or coldness in your legs or arms, pain in the neck, jaw, throat, upper abdomen or back  => Heart disease <br>  ++Sore muscle => Chronic pain syndromes, such as fibromyalgia  <br><br>";
                 } 
                 if (isChecked2){
-                    document.getElementById("result").innerHTML += "<b>Redness spot on nose:</b><br> ++ Itchy, hives => Rashes<br> ++ Rashes are flat => Muscle<br> ++ Rashes are raised => Papule <br> ++ Tiny, pinpoint hemorrhages develop into larger purplish red spot  => petechiae <br><br>";
+                    document.getElementById("result").innerHTML += "<b>Breast pain:</b><br> ++ A pain in the armpits or breast that does not change with the monthly cycle, a discharge from a nipple, possibly containing blood, a sunken or inverted nipple, peeling, flaking, or scaling of the skin on the breast or nipple => Breast Cancer<br> ++ Tender breasts, fatigue, nausea => Pregnancy <br> ++ Just before or during menstrual cycle, sore breasts, acne, food craving, constipation, emotional outbursts =>Premenstrual Syndrome (PMS) <br><br>";
                 }
                 if (isChecked3){
-                    document.getElementById("result").innerHTML += "<b>Nose bleeding: </b><br> ++ Constantly nose bleeding for a long period of time => Blood disorder or more severe<br> ++ Foreign object stuck in nose<br> ++ Having other allergic reaction => Allergy <br> ++ Being hit  => Nose Injury <br> ++ Little blood streak => Nose Injury by picking the Nose <br> ++ Cough, sneezing, nasal discharge, fever, scratchy or sore throat => Upper Respiratory Infection <br><br>";
+                    document.getElementById("result").innerHTML += "<b>Lung pain: </b><br> ++ Cough, pain in chest due to repeated coughing => Asthma <br> ++ A new cough that doesn't go away, coughing up blood, shortness of breath, chest pain, hoarseness, losing weight without trying, bone pain, headache => Lung Cancer <br><br>";
                 } 
-                if (isChecked4){
-                    document.getElementById("result").innerHTML += "b>Nose bleeding: </b><br> ++ Constantly nose bleeding for a long period of time => Blood disorder or more severe<br> ++ Foreign object stuck in nose<br> ++ Having other allergic reaction => Allergy <br> ++ Being hit  => Nose Injury <br> ++ Little blood streak => Nose Injury by picking the Nose <br> ++ Cough, sneezing, nasal discharge, fever, scratchy or sore throat => Upper Respiratory Infection <br><br>";
-                } 
+        
                 else {
                 	document.getElementById("result").innerHTML += "Please select your symptoms.";
                 }
             }
-            
-        
         </script>
                 
     </body>
