@@ -1,0 +1,129 @@
+<!DOCTYPE>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <title> Women's Health</title>
+        <meta name= "author" content="Xiaoyue Tan & Ziwei Zang" />
+        <meta name="description" content="This Website is designed for explaining the nose symptoms.">
+        <link rel="healthd icon" href="pic/icon_white-01.ico" type="image/x-ico">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/fixed-navigation-bar.css">
+	
+        <style>
+            body{
+                background-color: rgb(197, 170, 152);
+            }
+            img{
+                width: 500px;
+                height: auto;
+                
+            }
+            div{
+                width:500px;
+                margin: 0 auto;
+            }
+            .para{
+                text-align: center;
+            }
+            .button {
+                background-color: #00a087;
+                border: none;
+                color:black;
+                padding: 15px 30px;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 200;
+                display: block;
+                margin: 10 auto;
+                border-radius: 10px;
+            }
+            .button:hover{
+                background-color: #d67e7a;
+                color: aliceblue;
+            }
+            div .result{
+                display: none;
+                padding: 20px;
+                height:1300px;
+                width: 800px;
+                background-color: white;
+                border-radius: 15px;
+                margin:auto;
+                position: absolute;
+                left: 300px;
+            }
+            div .topfornav{
+                
+                
+            }
+        </style>
+    </head>
+    
+    <body>
+        <!--Navigation Bar -->
+        <nav class="fixed-nav-bar">
+          <div id="menu" class="menu">
+            <a class="sitename">Women's Health Issue Diagnose</a>
+            <!-- Example responsive navigation menu  -->
+            <a class="show" href="#menu"><img src=pic/menu.jpg style="width:40px;"></a><a class="hide" href="#hidemenu"> <img src=pic/menu.jpg style="width:40px"> </a>
+            <ul class="menu-items">
+              <li><a href="body.html"><img src=pic/icon_without.png style="width:40px; "></a></li>
+              <li><a href="//sixrevisions.com/about/">About</a></li>
+              <li><a href="//sixrevisions.com/contact/">Contact</a></li>
+              <li><a href="//twitter.com/sixrevisions">Twitter</a></li>
+              <li><a href="//www.facebook.com/sixrevisions">SOS</a></li>
+          </ul>
+          </div>
+        </nav>
+        
+        <div id="topfornav">
+            <h1 class="para" style="font-size: 300%; margin-top: 50px;">What Happened With Your Arms</h1>
+            <p class="para" style="font-size: 150%">Please check the box besides the picture that demonstrates your symptom.</p>
+
+            <div><input type="checkbox" id="armswell"  ><img src="pic/armswell.png" alt="A picture dipicting swelling arms"></div><br>
+            <div><input type="checkbox" id="shouldersour" ><img src="pic/shoudersour.png" alt="A picture dipicting shoulder sour"></div><br>
+            <div><input type="checkbox" id="armstiff"><img src="pic/armstiff.png" alt="A picture dipicting stiffing arms"></div><br>
+            <div><input type="checkbox" id="armred"><img src="pic/armred.png" alt="A picture dipicting red arms"></div><br>
+
+            <a href="#resultcontainer"> <div> <button type="button" id="submitbutton" class="button" onclick="showupFunction()"> Submit </button> </div>  </a> <br><br><br>
+
+            <div class="result" id="resultcontainer"><h1 style="font-family: fantasy; text-align: center">RESULT</h1><div id="result">
+            </div>        
+        </div>
+            
+        </div>
+        
+        
+        <script type="text/javascript">
+            function showupFunction(){
+                document.getElementById("resultcontainer").style.display = "initial";
+                document.getElementById("result").innerHTML= "<b>Dear User,<br>Here is your result:</b><br><br>";
+                
+                
+                var isChecked1 = document.getElementById("armswell").checked;
+                var isChecked2 = document.getElementById("shouldersour").checked;
+                var isChecked3 = document.getElementById("armstiff").checked;
+                var isChecked4 = document.getElementById("armred").checked;
+                if (isChecked1){
+                    document.getElementById("result").innerHTML += "<b>Swelling Arms: </b><br> ++Slightly visible arm sweliing when comparing the swollen arm or hand with the normal arm or hand in unilateral (one sided) swelling.=> Inflammation due to trauma (blunt force), injury (broken bones), overuse and exertion, toxins (poisonous substances, insect or snake bites), burns, allergies or chronic conditions like rheumatoid arthritis, carpal tunnel syndrome, gout <br> ++Slightly visible arm sweliing when comparing the swollen arm or hand with the normal arm or hand in unilateral (one sided) swelling.=> Inflammation due to trauma (blunt force), injury (broken bones), overuse and exertion, toxins (poisonous substances, insect or snake bites), burns, allergies or chronic conditions like rheumatoid arthritis, carpal tunnel syndrome, gout <br>++Itching experienced with or without an evident rash + Excessive warmth (heat) or cold and clammy skin .=> Infection – virus, bacteria, protozoa or fungi. Localized infection of the fingers, hand or forearm or a widespread infection of the arm as in cellulitis <br><br>";
+                } 
+                if (isChecked2){
+                    document.getElementById("result").innerHTML += "<b>Sour Shoulders</b><br> ++Pain generally doesn’t get worse when you move your shoulder. .=> Sometimes shoulder pain is the result of injury to another location in your body, usually the neck or bicep. This is known as referred pain. <br>++If you have done intensive body performances => You may injure your shoulder by performing manual labor, playing sports, or even by repetitive movement. Certain diseases can bring about pain that travels to the shoulder. These include diseases of the cervical spine of the neck, as well as liver, heart, or gallbladder disease. <br>++Pinching a nerve in the neck or shoulder; tendons, ligaments, and muscles stiffen and become difficult or impossible to move. => A frozen shoulder - Frozen shoulder is the common name for adhesive capsulitis, which is a shoulder condition that limits your range of motion. When the tissues in your shoulder joint become thicker and tighter, scar tissue develops over time. As a result, your shoulder joint doesn’t have enough space to rotate properly. <br>++The ball of the humerus pulls out of the shoulder socket. => A dislocated shoulder. - A dislocation occurs when a bone slips out of a joint. For example, the top of your arm bone fits into a joint at your shoulder. When it slips or pops out of that joint, you have a dislocated shoulder <br><br>";
+                }
+                if (isChecked3){
+                    document.getElementById("result").innerHTML += "<b>Stiffness: </b><br>++Reduced mobility or movement of the arm, without other feelings =>  too much exercises <br> ++Reduced mobility or movement of the arm, without other feelings =>  too much exercises <br><br>";
+                } 
+                if (isChecked4){
+                    document.getElementById("result").innerHTML += "<b>Arm Redness: </b><br> ++A rash is a noticeable change in the texture or color of your skin. Your skin becomes scaly, bumpy, itchy, or otherwise irritated. => contact dematitis allegies; Tick bites; Psoriasis; Seborrheic eczema<br> ++A rash is a noticeable change in the texture or color of your skin. Your skin becomes scaly, bumpy, itchy, or otherwise irritated. => contact dematitis allegies; Tick bites; Psoriasis; Seborrheic eczema<br><br>";
+                } else {
+                	document.getElementById("result").innerHTML += "Please select your symptoms.";
+                }
+            }
+            
+        
+        </script>
+                
+    </body>
+
+</html>
