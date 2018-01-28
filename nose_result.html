@@ -53,12 +53,18 @@
                 position: absolute;
                 left: 300px;
             }
-            div .topfornav{
-                
-                
+            
+            div .topfornav{   
             }
-            input[type="checkbox"] {
-              transform:scale(1.5, 1.5);
+            
+            div .bottom{
+            	display: none;
+            	margin:auto;
+                height:60px;
+                width: 100%;
+                background-color: white;
+                position: absolute;
+            }
             }
         </style>
     </head>
@@ -67,12 +73,12 @@
         <!--Navigation Bar -->
         <nav class="fixed-nav-bar">
           <div id="menu" class="menu">
-            <a class="sitename">Women's Health Issue Diagnose &nbsp <img src="pic/icon_without.png" style= "width:40px;" > </a>
+            <a class="sitename">Women's Health Issue Diagnosis &nbsp <img src="pic/icon_without.png" style= "width:40px;" > </a>
             <!-- Example responsive navigation menu  -->
             <a class="show" href="#menu"><img src="pic/menu.jpg" style="width:40px;"></a> <a class="hide" href="#hidemenu"> <img src=pic/menu.jpg style="width:40px;"> </a>
             <ul class="menu-items">
               <li><a href="body.html">HOME</a></li>
-              <li><a href="//sixrevisions.com/contact/">About</a></li>
+              <li><a href="#about">About</a></li>
               <li><a href="http://www.ushospitalfinder.com/">Hopstital</a></li>
           </ul>
           </div>
@@ -81,6 +87,8 @@
   </ul>
   </div>
 </nav>
+        <button onclick="openWin()">Open "myWindow"</button>
+        <button onclick="closeWin()">Close "myWindow"</button>
         
         <div id="topfornav">
             <h1 class="para" style="font-size: 300%; margin-top: 50px;">What Happened With Your Nose</h1>
@@ -99,8 +107,26 @@
             
         </div>
         
+        <div class="wrap">
+        <!--Page content here...-->
+        <div class="push"><!--Sticky Footer Push--></div>
+    </div>
+    <footer style="background-color= white">
+    	This website
+        
+    </footer>
         
         <script type="text/javascript">
+        
+        	var myWindow;
+			function openWin() {
+   			 	myWindow = window.open("", "myWindow", "width=200,height=100");
+    			myWindow.document.write("<p>This is 'myWindow'</p>");
+			}
+			function closeWin() {
+    			myWindow.close();
+			}
+			
             function showupFunction(){
                 document.getElementById("resultcontainer").style.display = "initial";
                 document.getElementById("result").innerHTML= "<b>Dear User,<br>Here is your result:</b><br><br>";

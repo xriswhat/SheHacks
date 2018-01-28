@@ -7,6 +7,10 @@ h1 {
     display:block; width:50%; margin-left: 25%; margin-right:25%; margin-top:25%;font-family: "Impact";
 }
 
+h2 {
+    display:block; width:50%; margin-left: 25%; margin-right:25%; margin-top:25%;font-family: "monospace";
+}
+
 h3 {
     display:block; width:40%; margin-left: 30%; margin-right:25%; margin-top:25%;
 }
@@ -86,3 +90,15 @@ h3 {
                 background-color: #d67e7a;
                 color: aliceblue;
             }
+            
+.wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -100px; /* Set footer height. */
+}
+
+footer, .push {
+    height: 100px; /* Set footer height. */
+    /* clear: both; */ /* Muti-column fix.*/
+}
